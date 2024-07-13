@@ -117,3 +117,5 @@ NewtonsoftJsonPatchInputFormatter GetJsonPatchInputFormatter() =>
     .Services.BuildServiceProvider()
     .GetRequiredService<IOptions<MvcOptions>>().Value.InputFormatters
     .OfType<NewtonsoftJsonPatchInputFormatter>().First();
+
+// This project is now on githero20/company-employees-api
