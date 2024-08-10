@@ -72,6 +72,10 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 var logger = app.Services.GetRequiredService<ILoggerManager>();
+
+// There is an order to how middleware components should be registered
+// i.e. the order to these app.xxx services
+
 app.ConfigureExceptionHandler(logger);
 
 // Configure the HTTP request pipeline.
